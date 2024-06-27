@@ -1,9 +1,28 @@
+<style scoped>
+.footer {
+    position: sticky;
+    top: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.deleteAll {
+    background-color: #ffb6b9;
+    border-radius: 10px;
+    padding: 5px;
+    cursor: pointer;
+    font-size: 15px;
+    font-weight: 600;
+}
+
+</style>
+
 <template>
-    <div v-show="total">
-        <input type="checkbox" v-model="isAll"> 已完成{{ doneTotal }} \ 总数 {{ total }}
-
-        <button style="color: red" @click="handleDelete">删除所有已完成的</button>
-
+    <div class="footer">
+        <div ><input type="checkbox" v-model="isAll"> DoneTotal <span style="font-weight: bold ">{{ doneTotal }}</span> \ Total <span style="font-weight: bold "> {{ total }}</span>
+        </div>
+        <div class="deleteAll" @click="handleDelete">DeleteAll</div>
     </div>
 
 </template>
@@ -32,7 +51,7 @@ export default {
     },
     methods: {
         handleDelete() {
-            confirm('你是否要删除所有已完成的？')
+            if (confirm('你是否要删除所有已完成的？'))
             {
                 this.$emit('deleteAllTodo')
             }
@@ -41,6 +60,3 @@ export default {
 }
 </script>
 
-<style scoped>
-
-</style>
