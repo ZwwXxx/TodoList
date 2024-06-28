@@ -72,7 +72,7 @@ label span i{
     border-radius: 50%;
     top: 4px;
     left: 4px;
-    transition: 0.4s;
+    transition: 0.1s;
 }
 label input:checked~span i{
     left: 34px;
@@ -102,7 +102,7 @@ label span i::after{
     left: 6px;
     bottom: 5px;
     content: '';
-    transition: 0.3s;
+    transition: 0.1s;
 }
 label input:checked ~span  i::after{
     background: rgb(102, 150, 31) ;

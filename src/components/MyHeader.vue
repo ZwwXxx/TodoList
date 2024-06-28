@@ -31,7 +31,7 @@
     font-size: 0.8em;
     font-weight: 900;
     pointer-events: none;
-    transition: all  0.5s;
+    transition: 150ms cubic-bezier(0.4,0,0.2,1);
 }
 
 .inputBody input:valid ~ span,
